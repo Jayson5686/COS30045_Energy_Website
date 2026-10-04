@@ -1,0 +1,116 @@
+<html>
+<head>
+    <title>Energy Webpage - Storyboards</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/storyboard.css">
+</head>
+<body id="home">
+    
+    <!-- Header links -->
+    <div class="nav">
+        <nav>
+            <div class="logo">
+                <img src="./images/PowerIcon.png" onclick="location.href = 'index.html'">
+                <h1>Energy Webpage</h1>
+            </div>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="televisions.html">Televisions</a>
+                <a href="about.html">About Us</a>
+                <a href="storyboards.html"  class="active">Storyboards</a>
+                <a href="svg.html">SVG</a>
+                <a href="charts.html">Charts</a>
+                <a href="histogram.html">Histogram</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main section -->
+    <main>
+
+        <!-- Two buttons to switch between storyboards -->
+        <div class="sb-btn-container">
+            <div class="sb-btn-bg">
+                <div class="placement"></div>
+                <div class="sb-btn" onclick="storyClick(1)">Storyboard 1</div>
+                <div class="sb-btn" onclick="storyClick(2)">Storyboard 2</div>
+            </div>
+        </div>
+
+        <section id="dialog">
+            <dialog id="tv-dialog" closedBy="any">
+                <img src="">
+
+                <form method="dialog">
+                    <button type="submit">Close</button>
+                </form>
+            </dialog>
+        </section>
+        
+        <!-- Storyboard containers (slide between) -->
+        <div class="cont-flex-sb">
+
+            <!-- Storyboard 1 -->
+            <div id="sb1" class="flex-sb">
+                <div class="storytext">
+                    <h1>TV Manufacturing Countries</h1>
+                    <p>
+                        The story drawing here shows the differences between countries that 
+                        manufacture TVs and how they are able to impact consumers. It is clear that China 
+                        and Indonesia are leading, but the real question is why? Why are the numbers for the Australian
+                        manufacturers so low, and what risk does it pose to them if the trend continues?
+                    </p>
+                    <p>
+                        The policy makers should work closely with Australian manufacturers to promote TVs made locally by 
+                        various announcements, events or discounts. This way, the benefit goes both ways that include 
+                        the consumer as well as the manufacter. If no effort is made to get Australians to buy 
+                        Australian-manufactured TVs, then it is without a doubt that eventually locally manufactured TVs 
+                        will cease to exist.
+                    </p>
+                    <button type="button" onclick="showGraph(1)">View Graph</button>
+                </div>
+                <div class="storyboard">
+                    <img src="./images/Storyboard1.jpg" >
+                </div>
+            </div>
+
+
+            <!-- Storyboard 2 -->
+            <div id="sb2" class="flex-sb hidden">
+                <div class="storytext">
+                    <h1>Screen Technology Power Consumption</h1>
+                    <p>
+                        Screen Technology affects the power consumption of the television. OLED is often advertised as the 
+                        energy-saving technology that is considered a luxury for some, that some of the energy can be shaved 
+                        off via this technology. However, the graph tells us something different, where OLED screen technology 
+                        uses the most power compared to the other screen technologies. The expected result would be the graph 
+                        ascending, but instead we have a descending graph. 
+                    </p>
+                    <p>
+                        This can happen due to a variety of reasons. Sometimes it's not the technology's fault but the people 
+                        who use it. The storyboard explains how the TV Manufacturers should design their smart systems to 
+                        account for all types of people and mindset. Someone looking at this graph would never buy an OLED TV
+                        because it just doesn't make sense to buy something expensive and have the energy consumption be high, . 
+                        paying extra for a non-existent benefit. 
+                    </p>
+                    <button type="button" onclick="showGraph(2)">View Graph</button>
+                </div>
+                <div class="storyboard">
+                    <img src="./images/Storyboard2.jpg">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            ©️ <span id="footer-year"></span> - Jayson Gan
+            <br>
+            Disclaimer: This page includes AI generated content. The summary of the storyboard was inspired with the use of Gen-AI
+        </p>
+    </footer>
+
+</body>
+<script src="./js/scripts.js"></script>
+<script src="./js/storyboard.js"></script>
+</html>

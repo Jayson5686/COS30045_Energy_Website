@@ -1,0 +1,117 @@
+.energy-calculator {
+    max-width: 70rem;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    color: var(--color-text-primary, #3b3326);
+    background-color: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(129, 102, 62, 0.3);
+    border-radius: var(--border-radius, 1rem);
+}
+
+.energy-calculator h2 {
+    margin-top: 0;
+}
+
+.calculator-form {
+    margin-top: 1.25rem;
+}
+
+.calculator-fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    gap: 1rem;
+}
+
+.calculator-field {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.calculator-field label {
+    font-weight: 600;
+}
+
+.calculator-field input {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.55rem 0.7rem;
+    color: inherit;
+    background: #fff;
+    border: 1px solid #81663e;
+    border-radius: 0.4rem;
+    font: inherit;
+}
+
+.calculator-field input:focus {
+    outline: 3px solid rgba(247, 163, 39, 0.45);
+    outline-offset: 2px;
+}
+
+.calculator-field input[aria-invalid="true"] {
+    border-color: #a32323;
+}
+
+.calculator-submit {
+    margin-top: 1rem;
+    padding: 0.7rem 1rem;
+    color: #fff;
+    background: var(--color-text-primary, #81663e);
+    border: 0;
+    border-radius: 0.4rem;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.calculator-submit:hover {
+    background: var(--color-link-hover, #5e4a2d);
+}
+
+.calculator-submit:focus-visible {
+    outline: 3px solid var(--color-accent, #f7a327);
+    outline-offset: 3px;
+}
+
+.calculator-results {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(129, 102, 62, 0.35);
+}
+
+.calculator-message {
+    min-height: 1.5em;
+    font-weight: 600;
+}
+
+.calculator-message.is-error {
+    color: #8b1e1e;
+}
+
+.calculator-result-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+    gap: 0.75rem;
+    margin: 0;
+}
+
+.calculator-result-list > div {
+    padding: 0.8rem;
+    background: rgba(247, 163, 39, 0.12);
+    border-radius: 0.5rem;
+}
+
+.calculator-result-list dt {
+    font-size: 0.9rem;
+}
+
+.calculator-result-list dd {
+    margin: 0.35rem 0 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.calculator-note {
+    margin-bottom: 0;
+    font-size: 0.875rem;
+}

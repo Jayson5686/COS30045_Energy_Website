@@ -1,0 +1,12 @@
+.responsive-svg-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+svg {
+  width: 100%;
+  height: auto; /* Ensures height scales proportionally */
+  /* max-width: 100%; Prevents the SVG from overflowing its container */
+}

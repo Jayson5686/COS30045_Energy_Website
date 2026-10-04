@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Energy Webpage - Histogram</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/visualizations.css">
+</head>
+<body id="histograms">
+    
+    <!-- Header links -->
+    <div class="nav">
+        <nav>
+            <div class="logo">
+                <img src="./images/PowerIcon.png" onclick="location.href = 'index.html'">
+                <h1>Energy Webpage</h1>
+            </div>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="televisions.html">Televisions</a>
+                <a href="about.html">About Us</a>
+                <a href="storyboards.html">Storyboards</a>
+                <a href="svg.html">SVG</a>
+                <a href="charts.html">Charts</a>
+                <a href="histogram.html" class="active">Histogram</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main section -->
+    <main>
+        <div id="filters_screen"></div>
+        <div id="histogram"></div>
+        <div id="scatterplot"></div>
+    </main>
+
+    <footer>
+        <p>
+            ©️ <span id="footer-year"></span> - Jayson Gan
+            <br>
+            Disclaimer: This page includes AI generated content. The exercise navigation was created with the help of AI.
+        </p>
+    </footer>
+
+</body>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="./js/scripts.js"></script>
+<script src="./js/shared-constants.js"></script>
+<script src="./js/histogram.js"></script>
+<script src="./js/scatterplot.js"></script>
+<script src="./js/interactions.js"></script>
+<script src="./js/load-data.js"></script>
+</html>

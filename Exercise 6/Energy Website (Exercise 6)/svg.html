@@ -1,0 +1,166 @@
+<html>
+<head>
+    <title>Energy Webpage - SVGs</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/svg.css">
+</head>
+<body id="home">
+    
+    <!-- Header links -->
+    <div class="nav">
+        <nav>
+            <div class="logo">
+                <img src="./images/PowerIcon.png" onclick="location.href = 'index.html'">
+                <h1>Energy Webpage</h1>
+            </div>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="televisions.html">Televisions</a>
+                <a href="about.html">About Us</a>
+                <a href="storyboards.html">Storyboards</a>
+                <a href="svg.html" class="active">SVG</a>
+                <a href="charts.html">Charts</a>
+                <a href="histogram.html">Histogram</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main section -->
+    <main>
+        <div class="esvg-btn-container">
+            <div class="esvg-btn-bg">
+                <div id="slid-bg" class="placement"></div>
+                <div class="esvg-btn" onclick="storyClick(1, this)">Exercise 4.1 & 4.2</div>
+                <div class="esvg-btn" onclick="storyClick(2, this)">Exercise 4.3</div>
+                <div class="esvg-btn" onclick="storyClick(3, this)">Exercise 4.4</div>
+                <div class="esvg-btn" onclick="storyClick(4, this)">Exercise 4.5</div>
+                <div class="esvg-btn" onclick="storyClick(5, this)">Exercise 4.6 & 4.7</div>
+            </div>
+        </div>
+
+        <div class="flex exercise" id="e1">
+            <div>
+                <h2>Real SVG:</h2>
+                <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- 1. Background Sky (Rectangle) -->
+                    <rect width="400" height="400" fill="#87CEEB" />
+
+                    <!-- 2. Grass (Rectangle) -->
+                    <rect x="0" y="300" width="400" height="100" fill="#228B22" />
+
+                    <!-- 3. Main House Body (Rectangle) -->
+                    <rect x="100" y="200" width="200" height="120" fill="#F5F5DC" stroke="black" />
+
+                    <!-- 4. Roof (Polygon - Triangle) -->
+                    <polygon points="100,200 300,200 200,120" fill="#A52A2A" stroke="black" />
+
+                    <!-- 5. Left Window (Rectangle) -->
+                    <rect x="120" y="230" width="30" height="30" fill="#ADD8E6" stroke="black" />
+
+                    <!-- 6. Right Window (Rectangle) -->
+                    <rect x="250" y="230" width="30" height="30" fill="#ADD8E6" stroke="black" />
+
+                    <!-- 7. Door (Rectangle) -->
+                    <rect x="185" y="260" width="30" height="60" fill="#8B4513" />
+
+                    <!-- 8. Sun (Circle) -->
+                    <circle cx="340" cy="60" r="30" fill="yellow" />
+
+                    <!-- 9. Flower (Line and Circle) -->
+                    <line x1="350" y1="360" x2="350" y2="330" stroke="green" stroke-width="2" />
+                    <circle cx="350" cy="330" r="8" fill="red" />
+
+                    <!-- 10. Garden Path (Polyline) -->
+                    <polyline points="185,320 170,350 190,380 170,400" fill="none" stroke="#808080" stroke-width="4" />
+
+                    <!-- 11. Label (Text) -->
+                    <text x="20" y="40" font-family="Arial" font-size="20" fill="white">SVG House &amp; Garden</text>
+                </svg>
+            </div>
+            <div>
+                <h2>Annotated image</h2>
+                <img src="./images/annotated_svg.png">
+            </div>
+            <div>
+                <h2>Customized SVG</h2>
+                <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- 1. Background Sky (Rectangle) -->
+                    <rect width="400" height="400" fill="#57FEEB" />
+
+                    <!-- 2. Grass (Rectangle) -->
+                    <rect x="0" y="300" width="400" height="100" fill="#228B22" />
+
+                    <!-- 3. Main House Body (Rectangle) -->
+                    <rect x="100" y="200" width="200" height="120" fill="#F5F5DC" stroke="black" />
+
+                    <!-- 4. Roof (Polygon - Triangle) -->
+                    <polygon points="100,200 300,200 250,120, 150,120" fill="#A52A2A" stroke="black" />
+
+                    <!-- Windows -->
+                    <g transform="translate(0,35)">
+                        <!-- 5. Left Window (Rectangle) -->
+                        <rect x="120" y="230" width="30" height="30" fill="#ADD8E6" stroke="black" />
+                        <line x1="135" y1="230" x2="135" y2="260" stroke="black" />
+                        <line x1="120" y1="245" x2="150" y2="245" stroke="black" />
+
+                        <!-- 6. Right Window (Rectangle) -->
+                        <rect x="250" y="230" width="30" height="30" fill="#ADD8E6" stroke="black" />
+                        <line x1="265" y1="230" x2="265" y2="260" stroke="black" />
+                        <line x1="250" y1="245" x2="280" y2="245" stroke="black" />
+                    </g>
+
+                    <!-- 7. Door (Rectangle) -->
+                    <rect x="185" y="260" width="30" height="60" fill="#8B4513" />
+
+                    <!-- 8. Sun (Circle) -->
+                    <circle cx="360" cy="90" r="35" fill="yellow" />
+
+                    <!-- 9. Flower (Line and Circle) -->
+                    <line x1="350" y1="360" x2="350" y2="330" stroke="green" stroke-width="2" />
+                    <circle cx="350" cy="330" r="8" fill="red" />
+
+                    <!-- 10. Garden Path (Polyline) -->
+                    <polyline points="185,320 170,350 190,380 170,400 200,400 220,380 200,350 215,320" fill="#808080" stroke="#808080" stroke-width="4" />
+
+                    <!-- 11. Label (Text) -->
+                    <text x="20" y="40" font-family="Arial" font-size="20" fill="black">SVG House &amp; Garden</text>
+                </svg>
+            </div>
+            <div>
+                <h2>DOM view</h2>
+                <img src="./images/DomScreenshot1.png">
+            </div>
+        </div>
+
+        <div class="flex exercise hidden" id="e2">
+            <div class="responsive-svg-container"></div>
+        </div>
+        
+        <div class="flex exercise hidden" id="e3">
+            <div class="responsive-svg-container"></div>
+        </div>
+
+        <div class="flex exercise hidden" id="e4">
+            <div class="responsive-svg-container"></div>
+        </div>
+
+        <div class="flex exercise hidden" id="e5">
+            <div class="responsive-svg-container"></div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>
+            ©️ <span id="footer-year"></span> - Jayson Gan
+            <br>
+            Disclaimer: This page includes AI generated content. The exercise navigation was created with the help of AI.
+        </p>
+    </footer>
+
+</body>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="./js/scripts.js"></script>
+<script src="./js/d3.js"></script>
+<script src="./js/svg.js"></script>
+</html>
