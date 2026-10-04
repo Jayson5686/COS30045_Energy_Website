@@ -1,0 +1,138 @@
+:root {
+    /* Television cards */
+    --card-bg: #ffffff;
+    --card-shadow: 0 0.25rem 0.75rem rgba(129, 102, 62, 0.15);
+    --tag-bg: var(--color-accent);
+    --tag-text: #ffffff;
+}
+
+.items {
+    display: grid;
+    /* Automatically fits as many cards as possible, minimum 20rem wide */
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 3rem;
+    padding: 1.5rem;
+    margin: 0;
+}
+
+/* 2. Card Structure */
+.card {
+    background-color: var(--card-bg);
+    border: 0.125rem solid var(--color-main-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: var(--card-shadow);
+}
+
+.card:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(129, 102, 62, 0.25);
+}
+
+/* 3. Image Section & Tags */
+.card .image {
+    position: relative;
+    height: 9rem;
+    background-color: #f9f9f9;
+    border-bottom: 0.1rem solid var(--color-main-bg);
+}
+
+.card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* Styling for tags on the top right */
+.card .image .tag {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background-color: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.2);
+}
+
+/* 4. Description Section */
+.card .desc {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Ensures buttons align even if text length varies */
+}
+
+.card .desc h3 {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: 1.15rem;
+}
+
+.card .desc p {
+    color: #555;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+/* 5. "View More" Button */
+.card .desc button, dialog button {
+    background-color: var(--color-text-primary);
+    color: var(--color-main-bg);
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    align-self: flex-start;
+}
+
+body#televisions button:hover {
+    background-color: var(--color-link-hover);
+}
+
+/* 6. Dialog (Modal) Styling */
+dialog {
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    max-width: 40rem;
+    width: 90%;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.3);
+}
+
+/* The dimmed background when dialog is open */
+dialog::backdrop {
+    background: rgba(129, 102, 62, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+/* Styling inside the dialog */
+dialog h2 {
+    color: var(--color-text-primary);
+    margin-top: 0;
+}
+
+dialog .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: var(--color-main-bg);
+    border-radius: 0.5rem;
+}
+
+dialog .info-grid span {
+    margin-left: 0.2em;
+}
