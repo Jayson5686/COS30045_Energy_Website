@@ -1,0 +1,60 @@
+.flex {
+    display: flex;
+    gap: 6rem;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+.esvg-btn-container {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+}
+
+.esvg-btn-bg {
+    margin: auto;
+    background-color: var(--color-accent);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    /* gap: 20px; */
+    padding: 5px;
+    height: fit-content;
+    position: relative;
+    cursor: pointer;
+}
+
+.esvg-btn {
+    z-index: 2;
+    cursor: pointer;
+    padding: 8px 16px;
+}
+
+div.placement {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 0;
+    height: calc(100% - 8px);
+    background-color: yellow; /* The color of the "selected" area */
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+div.hidden {
+    display: none;
+}
+
+.responsive-svg-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 1200px;
+}

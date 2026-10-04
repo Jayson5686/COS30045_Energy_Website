@@ -1,0 +1,100 @@
+
+:root {
+    /* Color Palette */
+    --color-main-bg: #fbe79c;     
+    --color-text-primary: #81663e;
+    --color-accent: #f7a327;      
+    --color-link-hover: #5e4a2d;  
+
+    --bgColor: hsl(from var(--color-main-bg) h calc(s - 10) calc(l + 10));
+
+    
+    /* Sizing and Spacing */
+    --nav-padding: 1rem 2rem;
+    --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --border-radius: 1rem;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    background-color: var(--bgColor);
+}
+
+/* Whole navigation bar */
+.nav nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--nav-padding);
+    background-color: var(--color-main-bg);
+    border-bottom: 0.2rem solid var(--color-text-primary);
+}
+
+/* Style title with logo */
+nav .logo {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+}
+
+nav .logo img {
+    width: 5rem; 
+    border-radius: var(--border-radius);
+    display: block;
+    object-fit: contain;
+}
+
+/* Links Container */
+nav .links {
+    display: flex;
+    gap: 1.5rem; /* Space between links */
+}
+
+/* Individual Links */
+nav .links a {
+    text-decoration: none;
+    color: var(--color-text-primary);
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.8rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 0.4rem;
+}
+
+/* Hover effect to make it darker */
+nav .links a:hover {
+    color: var(--color-link-hover);
+    background-color: rgba(129, 102, 62, 0.1); 
+}
+
+/* Highlight active page */
+nav .links a.active {
+    color: var(--color-accent);
+    border-bottom: 0.2rem solid var(--color-accent);
+}
+
+/* Accessibility: Focus state for keyboard navigation */
+nav .links a:focus {
+    outline: 0.2rem solid var(--color-accent);
+    outline-offset: 4px;
+}
+
+/* Configure margin so it doesn't start from edge */
+main {
+    margin: 1.2em;
+}
+
+
+/* Highlight the footer */
+footer {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background-color: var(--color-accent);
+    border-radius: 30px;
+    margin: 1em auto;
+    width: fit-content;
+    padding: 0.1em 1em;
+}
+
